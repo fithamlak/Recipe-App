@@ -79,7 +79,7 @@ gem 'cancancan'
 
 # authentication
 
-gem 'device'
+gem 'devise'
 
 # tailwinds
 
