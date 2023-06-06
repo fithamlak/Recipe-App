@@ -1,0 +1,43 @@
+<div class="flex flex-col mt-8 mx-9">
+<div class="grid w-100">
+    <div class="justify-self-end">
+        <%= button_to "Add Food", new_food_path, method:'get', class: "p-3
+        rounded-full bg-emerald-200 text-end mb-3 justify-self-end" %> 
+    </div>
+</div>
+  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead
+        class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+      >
+        <tr>
+          <th scope="col" class="px-6 py-3">Food</th>
+          <th scope="col" class="px-6 py-3">Measurement unit</th>
+          <th scope="col" class="px-6 py-3">Unit price</th>
+          <th scope="col" class="px-6 py-3">Quantity</th>
+          <th scope="col" class="px-6 py-3">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @foods.each_with_index do |food, i| %>
+        <tr
+          class="<%= i % 2 != 0 ? 'border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700' : 'bg-white border-b dark:border-gray-700' %>"
+        >
+          <th
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+            <%= food.name %>
+          </th>
+          <td class="px-6 py-4"><%= food.measurement_unit %></td>
+          <td class="px-6 py-4">$<%= food.price %></td>
+          <td class="px-6 py-4">$<%= food.quantity %></td>
+          <td class="px-6 py-4">
+            <%= button_to 'Delete', food_path(food.id), method: 'delete', class: 'font-medium text-red-600 dark:text-blue-500 hover:underline' %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
