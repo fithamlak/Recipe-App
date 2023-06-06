@@ -72,3 +72,15 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+# Authentication
+
+gem 'cancancan'
+
+# authentication
+
+gem 'device'
+
+# tailwinds
+
+gem 'tailwindcss-rails'
