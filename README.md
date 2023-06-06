@@ -54,7 +54,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 git clone https://github.com/fithamlak/Recipe-app.git
-```
+
 
 Or download the ZIP folder.
 
@@ -88,6 +88,7 @@ open terminal and run
 
 ### Run tests
  To start tests run:
+ 
 ```
 rspec spec
 ```
