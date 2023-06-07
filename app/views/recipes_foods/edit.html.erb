@@ -1,0 +1,11 @@
+<section class="flex flex-col justify-center items-center w-4/5">
+  <h1>Edit ingridient </h1>
+   <%= form_with url: recipe_recipes_food_path(@recipe_food.recipe_id,  @recipe_food.id), method: :put, :class => 'w-full flex flex-col items-center', local: true, scope: :recipe_food do |f| %>
+    <div class="flex flex-col">
+      <%= f.label :quantity, class: "font-bold" %>
+      <%= f.number_field :quantity, value: @recipe_food.quantity, class: "w-20" %>
+    </div>
+    <%= f.submit "Create recipe", class: "p-3
+    rounded-full bg-emerald-200 text-end mb-3 justify-self-end" %> 
+  <% end %>
+</section>
