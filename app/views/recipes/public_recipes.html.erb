@@ -1,0 +1,23 @@
+<div class="flex flex-col mt-12">
+   <h1 class="font-black text-3xl text-center mb-5">Public recipes</h1>
+   <ul class="flex flex-col items-center">
+    <% @recipes.each do |recipe| %>
+       <li class="flex border p-5 gap-10">
+         <div class="flex flex-col">
+            <h1 class="text-xl font-black"><%= link_to recipe.name, recipe_path(recipe.id) %></h1>
+            <p>by <%= recipe.user.name %></p>
+         </div> 
+         <div class="flex flex-col">
+            <p>Total food items: <%= recipe.recipe_foods.count%></p>
+            <p>Total price: 
+               <% total_price = 0 %>
+               <% recipe.recipe_foods.each do |recipe_food| %>
+                  <% total_price += recipe_food.food.price * recipe_food.quantity %>
+               <% end %>
+               $<%=total_price %>
+            </p>
+         </div>
+       </li>
+    <% end %>    
+   </ul>
+</div>
