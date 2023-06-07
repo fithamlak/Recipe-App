@@ -1,3 +1,9 @@
+/*
+ *= require_self
+ *= require_tree .
+ */
+
+/* Your custom CSS code */
 .hide {
   animation: hideAnimation 0s ease-in 5s;
   animation-fill-mode: forwards;
