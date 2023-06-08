@@ -1,8 +1,19 @@
 <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+
 <section class="recipe-section">
-<h1>All recipes</h1>
+<h1>All Recipes</h1>
+<div class="d-flex flex-row-reverse">
+  <%= link_to new_recipe_path, class: "btn btn-primary ms-3" do %>
+    <%= content_tag :i, nil, class: "bi bi-plus-circle-fill" %>
+    Add recipe
+  <% end %>
+<%= link_to public_recipes_path, class: "btn btn-success" do %>
+  <%= content_tag :i, nil, class: "bi bi-arrow-up-right-circle-fill" %>
+  Go to "Public Recipes"
+<% end %>
+</div>
 <div class="recipe-container">
-<table>
+<table class="table table-striped table-bordered mt-4">
   <thead>
     <tr>
       <th>Name</th>
@@ -15,15 +26,17 @@
       <tr>
         <td><%= recipe.name %></td>
         <td><%= recipe.description %></td>
-        <td><%= link_to 'View', recipe_path(id: recipe.id), class: 'preview-btn' %></td>
-        <td><%= link_to 'Delete', recipe_path(id: recipe.id), data: { turbo_method: :delete, turbo_confirm: 'Delete the recipe?' }, class: 'delete-btn' %></td>
+        <td><%= link_to recipe_path(id: recipe.id), class: "btn btn-success" do %>
+  <%= content_tag :i, nil, class: "bi bi-arrow-up-right-circle-fill" %>
+  Go to "View"
+<% end %></td>
+        <td><%= link_to recipe_path(id: recipe.id), data: {turbo_method: :delete, turbo_confirm: 'Delete this recipe food?'}, class: "btn btn-danger" do %>
+            <%= content_tag :i, nil, class: "bi bi-trash" %>
+            Remove
+          <% end %></td>  
       </tr>
     <% end %>
   </tbody>
 </table>
-</div>
-<div><button type="button" class="btn"><%= link_to "Add a new recipe", new_recipe_path %></button>
-<button type="button" class="btn"><%= link_to "Go to public recipes", public_recipes_path %></button>
-</div>
 
 </section>

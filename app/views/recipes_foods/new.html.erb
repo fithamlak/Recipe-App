@@ -1,12 +1,12 @@
 <section class="flex flex-col justify-center items-center w-4/5">
-  <h1>New ingridient </h1>
+  <h1>New ingredient </h1>
   <%= form_with url: recipe_recipes_foods_path(params[:recipe_id]), method: :post, :class => 'w-full flex flex-col items-center', local: true, scope: :recipe_food do |f| %>
     <%= f.collection_select :food_id, Food.order(:name).where(user_id: current_user.id), :id, :name, include_blank: false %>
     <div class="flex flex-col">
-      <%= f.label :quantity, class: "font-bold" %>
+      <%= f.label :quantity, class: "font-bold mt-3", style: "display: block" %>
       <%= f.number_field :quantity, name: "recipe_food[quantity]", class: "w-20" %>
     </div>
-    <%= f.submit "Create recipe", class: "p-3
-    rounded-full bg-emerald-200 text-end mb-3 justify-self-end" %> 
+    <%= f.submit "Create ingredient", class: "
+    rounded-full bg-emerald-200 text-end mt-3 justify-self-end" %> 
   <% end %>
 </section>
