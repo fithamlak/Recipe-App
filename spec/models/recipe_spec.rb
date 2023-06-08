@@ -51,18 +51,18 @@ RSpec.describe Recipe, type: :model do
 
   it 'expects recipe to be invalid when name exceeds the limit of 250 characters' do
     part1 = 'We are testing the maximum length of the name attribute in the recipe model.'
-    part2 = 'The name field has a limit of 250 characters, and we want to ensure that when the name exceeds this limit, the recipe object becomes invalid.'
-    part3 = 'To do so, we have prepared a lengthy paragraph as an example.'
+    part2 = 'The name field has a limit of 250 characters, and we want to ensure that when the name exceeds this limit,'
+    part3 = 'the recipe object becomes invalidTo do so, we have prepared a lengthy paragraph as an example.'
     part4 = 'This test confirms that the application handles the case when the name attribute exceeds the limit.'
-    
+
     subject.name = part1 + part2 + part3 + part4
     expect(subject).to_not be_valid
   end
 
   it 'expects recipe to be invalid when description exceeds the limit of 250 characters' do
     part1 = 'We are testing the maximum length of the description attribute in the recipe model.'
-    part2 = 'The description field has a limit of 250 characters, and we want to ensure that when the description exceeds this limit, the recipe object becomes invalid.'
-    part3 = 'To do so, we have prepared a lengthy paragraph as an example.'
+    part2 = 'description field has a limit of 250 characters, and we want to ensure that when it exceeds this limit,'
+    part3 = 'the recipe object becomes invalid. To do so, we have prepared a lengthy paragraph as an example.'
     part4 = 'This test confirms that the application handles the case when the name attribute exceeds the limit.'
 
     subject.description = part1 + part2 + part3 + part4
