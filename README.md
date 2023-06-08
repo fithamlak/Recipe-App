@@ -35,9 +35,31 @@
     <li><a href="https://www.ruby-lang.org/en/documentation/">Ruby on Rails</a></li>
   </ul>
 </details>
-### Key Features <a name="key-features"></a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://guides.rubyonrails.org/index.html">Ruby on Rails</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+### Key Features <a name="key-features"></a>
+- **cancancan**
+- **devise**
+- **ERD and ORM**
+- **Test with Rspec**
+- **Test with Capybara**
+- **Authorization**
+- **Authentication**
+- **MVC**
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 To get a local copy up and running, follow these steps.
@@ -139,4 +161,3 @@ This project is [MIT](./LICENSE) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
