@@ -2,22 +2,22 @@
     <h1 class="font-extrabold text-center text-lg mb-3 ">Add New Food</h1>
     
     <%= form_with model: @food, url: foods_path do |form| %>
-    <div class="flex flex-col">
+    <div class="">
         <%= form.label :name, class: "font-bold" %>
         <%= form.text_field :name, name: "food[name]", class: "w-96" %>
       </div>
-      <div class="flex justify-between my-2">
+      <div class="">
         <div class="flex flex-col">
             <%= form.label :measurement_unit, class: "font-bold" %>
             <%= form.text_field :measurement_unit, name: "food[measurement_unit]", class: "w-20" %>
           </div>
           
-          <div class="flex flex-col">
+          <div class="">
             <%= form.label :price, class: "font-bold" %>
             <%= form.number_field :price, name: "food[price]", class: "w-20" %>
           </div>
           
-          <div class="flex flex-col">
+          <div class="">
             <%= form.label :quantity, class: "font-bold" %>
             <%= form.number_field :quantity, name: "food[quantity]", class: "w-20" %>
           </div>
