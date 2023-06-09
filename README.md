@@ -130,6 +130,10 @@ rspec spec
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- **Users will be able to share videos of the recipe**
+- **Follow users**
+- **Add chat functionality**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
