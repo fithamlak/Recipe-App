@@ -5,7 +5,7 @@
        <li class="flex border p-5 gap-10">
          <div class="flex flex-col">
             <h1 class="text-xl font-black"><%= link_to recipe.name, recipe_path(recipe.id) %></h1>
-            <p>by <b><%= recipe.user.name %></b></p>
+            <p>by <%= recipe.user.name %></p>
          </div> 
          <div class="flex flex-col">
             <p>Total food items: <%= recipe.recipe_foods.count%></p>
