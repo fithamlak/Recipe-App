@@ -30,7 +30,12 @@
       
       <div class="flex justify-around">
         <%= link_to 'Generate shopping list', '/general_shopping_list', method:'get', class: "p-3 rounded-full bg-emerald-200 text-end mb-3 justify-self-end" %>
-        <%= link_to 'Add ingridient', new_recipe_recipes_food_path(@recipe.id), method:'get', class: "p-3 rounded-full bg-emerald-200 text-end mb-3 justify-self-end" %>
+
+  <%= link_to new_recipe_recipes_food_path(@recipe.id), class: "btn btn-primary ms-3" do %>
+    <%= content_tag :i, nil, class: "bi bi-plus-circle-fill" %>
+    Add ingredient
+  <% end %>
+
       </div>
     <% end %>
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-20">
