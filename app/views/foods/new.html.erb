@@ -1,0 +1,30 @@
+<div class="flex flex-col items-center">
+    <h1 class="font-extrabold text-center text-lg mb-3 ">Add New Food</h1>
+    
+    <%= form_with model: @food, url: foods_path do |form| %>
+    <div class="class="mb-3"">
+        <%= form.label :name, style: "display: block"  %>
+        <%= form.text_field :name, name: "food[name]", class: "w-96" %>
+      </div>
+      <div class="mb-3">
+        <div class="flex flex-col">
+            <%= form.label :measurement_unit, style: "display: block"  %>
+            <%= form.text_field :measurement_unit, name: "food[measurement_unit]", class: "w-20" %>
+          </div>
+          
+          <div class="mb-3">
+            <%= form.label :price, style: "display: block" %>
+            <%= form.number_field :price, name: "food[price]", class: "w-20" %>
+          </div>
+          
+          <div class="mb-3">
+            <%= form.label :quantity, style: "display: block" %>
+            <%= form.number_field :quantity, name: "food[quantity]", class: "w-20" %>
+          </div>
+      </div>
+       
+    <%= form.submit "Create food", class: "
+    rounded-full bg-emerald-200 text-end mb-3 justify-self-end" %> 
+  <% end %>
+</div>
+
